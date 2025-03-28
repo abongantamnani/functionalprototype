@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Change language to English -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzantsi Ai tutor</title>
+
+    <!-- Link to the logo as favicon -->
+    <link rel="icon" href="/download.jpeg" type="image/jpg">
+
+    <!-- External resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <div class="ai-profile">
+                <!-- Make the profile image clickable -->
+                <a href="index.html" target="_blank">
+                    <img src="download.jpeg" alt="AI Avatar" class="avatar">
+                </a>
+                <span class="ai-name">SA's first ai Tutor</span>
+            </div>
+        </header>
+        <main id="chat-messages"></main>
+        <footer>
+            <div class="input-container">
+                <button id="emoji-button" class="emoji-button">
+                    <i class="far fa-smile"></i>
+                </button>
+                <div id="emoji-picker" class="emoji-picker"></div>
+                <div id="typing-animation" class="typing-animation"></div>
+                <input type="text" id="user-input" placeholder="Type your message here" autocomplete="off"> <!-- Changed placeholder to English -->
+                <button id="send-button" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

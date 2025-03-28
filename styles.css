@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); /* Spooky font */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1b1b; /* Dark background */
+    color: #e0e0e0; /* Lighter text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png'); /* Subtle texture for a spooky feel */
+    background-size: cover;
+    overflow: hidden;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    height: 80vh; /* Set height to 75% of the viewport height */
+    max-height: 800px;
+    background-color: #2a2a2a; /* Dark chat container */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid s#2295b2; /* Creepy red border */
+}
+
+header {
+    background-color: #333333; /* Dark header */
+    color: #2cc960; /* Creepy red text color */
+    padding: 15px 20px;
+    font-family: 'Permanent Marker', cursive; /* Spooky font for header */
+}
+
+.ai-profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ai-name {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Permanent Marker', cursive; /* Spooky font */
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    animation: messageFadeIn 0.3s ease-in-out;
+}
+
+.message.ai {
+    margin-right: auto;
+}
+
+.message.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.message-content {
+    background-color: #3b3b3b; /* Darker background for messages */
+    border-radius: 18px;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    border: 2px solid #e2dbdb; /* Creepy red border for messages */
+}
+
+.message.ai .message-content {
+    background-color: #4b8e8d; /* Ghostly green for AI's messages */
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    padding: 15px 20px;
+    background-color: #333333; /* Dark footer */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #444444; /* Darker input area */
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.emoji-button, .voice-button, .send-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #1484e0; /* Red buttons for spooky effect */
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    font-family: 'Permanent Marker', cursive; /* Spooky button text */
+}
+
+.emoji-button:hover, .voice-button:hover, .send-button:hover {
+    color: #ff6347; /* Bright red hover effect */
+}
+
+#user-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    background: transparent;
+    color: #e0e0e0; /* Light text for input */
+}
+
+#user-input::placeholder {
+    color: #dfd3d3; /* Placeholder text in spooky red */
+}
+
+@keyframes messageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
